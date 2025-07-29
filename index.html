@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simforge Simulator</title>
+    <style>
+      body { margin: 0; overflow: hidden; font-family: Arial; background: #000; color: #fff; }
+      #sim-container { width: 100vw; height: 100vh; background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      button { margin-top: 20px; padding: 10px 20px; font-size: 18px; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div id="sim-container">
+      <h1>Simforge Simulation</h1>
+      <p>This is a static simulator preview. Real-time simulation would normally run here.</p>
+      <button onclick="speak()">Play Narration</button>
+    </div>
+    <script>
+      function speak() {
+        const utter = new SpeechSynthesisUtterance("This is a Simforge simulation. Imagine Mars colony under attack. Engineers are restoring oxygen. A meteor approaches.");
+        speechSynthesis.speak(utter);
+      }
+    </script>
+  </body>
+</html>
